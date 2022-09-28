@@ -1,10 +1,18 @@
 {% extends 'base.html' %}
 
-{% block content %}
-<h5>Nama: </h5>
-<p><b>{{nama}}</b></p>
+{% block meta %}
+<title>Wishlist</title>
+{% endblock meta %}
 
-<table>
+{% block content %}
+<nav class="navbar" style="background-color: #34495e;">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">{{nama}}</span>
+      <button style="background-color: #95a5a6; border-radius: 10px; align-items:flex-end;"><a style="color: black" href="{% url 'wishlist:logout' %}">Logout</a></button>
+    </div>
+  </nav>
+
+<table style="border-style: solid; margin-top: 20px; margin-left: 20px;">
     <tr>
     <th>Nama Barang</th>
     <th>Harga Barang</th>
@@ -20,8 +28,6 @@
     {% endfor %}
 </table>
 
-<h5>Sesi terakhir login: {{ last_login }}</h5>
-
-<button><a href="{% url 'wishlist:logout' %}">Logout</a></button>
+<p style="margin-top: 20px; margin-left: 20px;">Sesi terakhir login: {{ last_login }}</p>
 
 {% endblock content %}

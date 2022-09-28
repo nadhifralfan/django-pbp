@@ -5,11 +5,13 @@
 {% endblock meta %}
 
 {% block content %}  
+<nav class="navbar" style="background-color: #34495e;">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Formulir Registrasi</span>
+    </div>
+  </nav>
 
-<div class = "login">
-    
-    <h1>Formulir Registrasi</h1>  
-
+<div class = "login" style="margin-top: 20px; margin-left: 20px;">
         <form method="POST" >  
             {% csrf_token %}  
             <table>  
