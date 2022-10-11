@@ -28,6 +28,7 @@
     {% endfor %}
 </table>
 
+<button style="border-radius: 10px; align-items:flex-end;"><a style="color: black; text-decoration: none;" href="{% url 'wishlist:show_wishlist_ajax' %}">Create Wishlist</a></button>
 <p style="margin-top: 20px; margin-left: 20px;">Sesi terakhir login: {{ last_login }}</p>
 
 {% endblock content %}
